@@ -18,4 +18,13 @@ public class TestMaximum {
             max = z;
         return max;
     }
+
+    public static String maximum(String x, String y, String z){
+        String max = x;
+        if(y.compareTo(max) > 0)
+            max = y;
+        if(z.compareTo(max) > 0)
+            max = z;
+        return max;
+    }
 }

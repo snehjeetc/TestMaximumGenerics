@@ -49,4 +49,25 @@ public class TestMaximumValidator {
         Float max = TestMaximum.maximum(firstFloat, secondFloat, thirdFloat);
         Assert.assertEquals(thirdFloat, max);
     }
+
+    @Test
+    public void givenStringsMaxAtFirst_ShouldReturnTheMaxAtFirst(){
+        String firstString = "CCCC", secondString = "BBBB", thirdString = "AAAA";
+        String max = TestMaximum.maximum(firstString, secondString, thirdString);
+        Assert.assertEquals(firstString, max);
+    }
+
+    @Test
+    public void givenStringsMaxAtSecond_ShouldReturnTheMaxAtSecond(){
+        String firstString = "BBBB", secondString = "CCCC", thirdString = "AAAA";
+        String max = TestMaximum.maximum(firstString, secondString, thirdString);
+        Assert.assertEquals(secondString, max);
+    }
+
+    @Test
+    public void givenStringsMaxAtThird_ShouldReturnTheMaxAtThird(){
+        String firstString = "AAAA", secondString = "BBBB", thirdString = "CCCC";
+        String max = TestMaximum.maximum(firstString, secondString, thirdString);
+        Assert.assertEquals(thirdString, max);
+    }
 }
