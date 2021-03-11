@@ -7,22 +7,22 @@ import org.junit.Test;
 
 
 public class TestMaximumValidator {
-    private TestMaximum testMaximum;
-
-    @Before
-    public void init(){
-        testMaximum = new TestMaximum();
-    }
 
     @Test
     public void givenMaxAtFirst_ShouldReturnTheMaxAtFirst(){
-        Integer max = testMaximum.maximum(40, 30, 20);
+        Integer max = TestMaximum.maximum(40, 30, 20);
         Assert.assertEquals(Integer.valueOf(40), max);
     }
 
     @Test
-    public void giveMaxAtSecond_ShouldReturnTheMaxAtSecond(){
-        Integer max = testMaximum.maximum(30, 40, 20);
+    public void givenMaxAtSecond_ShouldReturnTheMaxAtSecond(){
+        Integer max = TestMaximum.maximum(30, 40, 20);
         Assert.assertEquals( Integer.valueOf(40), max);
+    }
+
+    @Test
+    public void givenMaxAtThird_ShouldReturnTheMaxAtThird(){
+        Integer max = TestMaximum.maximum(30, 50, 78);
+        Assert.assertEquals(Integer.valueOf(78), max);
     }
 }

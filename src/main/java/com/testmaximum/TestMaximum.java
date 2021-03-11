@@ -1,7 +1,7 @@
 package com.testmaximum;
 
 public class TestMaximum {
-    public Integer maximum(Integer x, Integer y, Integer z){
+    public static Integer maximum(Integer x, Integer y, Integer z){
         Integer max = x;
         if(y.compareTo(max) > 0)
             max = y;
